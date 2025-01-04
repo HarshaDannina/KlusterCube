@@ -1,0 +1,9 @@
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  namespace: default
+  name: kluster-cube-reader
+rules:
+- apiGroups: [""] # "" indicates the core API group
+  resources: ["pods", "services"]
+  verbs: ["get", "watch", "list"]
